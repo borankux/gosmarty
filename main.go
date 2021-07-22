@@ -1,11 +1,15 @@
 package main
 
-import "github.com/borankux/gosmarty/smarty"
+import (
+	"fmt"
+	"github.com/borankux/gosmarty/smarty"
+)
 
 func main() {
 	s := smarty.Smarty{}
-	s.Assign("name", "MotherFucker")
-	s.Assign("gender", "boy")
-	s.Assign("gender", "boy")
-	s.Print()
+	s.Assign("message", "This is the message")
+	s.Assign("subtitle", "this is the subtitle")
+	s.Assign("age", 28)
+	rendered := s.Render("main")
+	fmt.Println(rendered)
 }
