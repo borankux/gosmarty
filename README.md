@@ -35,6 +35,7 @@ output:
 - [ ] Configuration support
 - [ ] Error handling
 - [ ] File import support  
+- [ ] Plugin support
 - [ ] Cache support
 - [ ] Testing
 - [ ] Document
