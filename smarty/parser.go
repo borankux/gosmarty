@@ -7,7 +7,7 @@ import (
 )
 
 func Parse(html string, vars map[string]interface{}) string {
-	rule := `[{]{2}[$][a-zA-Z_]+[a-zA-Z0-9_]+[}]{2}`
+	rule := RULE_VARIABLE
 	r, _ := regexp.Compile(rule)
 	found := r.FindAllString(html, -1)
 	for _, f := range found {
