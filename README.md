@@ -34,7 +34,7 @@ output:
 - [ ] Complex data type  
 - [ ] Configuration support
 - [ ] Error handling
-- [ ] File import support  
+- [x] File import support  
 - [ ] Plugin support
 - [ ] Cache support
 - [ ] Testing
