@@ -30,11 +30,12 @@ output:
 
 ### Todo
 - [x] Basic Mustache variable assign and replace
+- [x] File import support
+- [ ] Comments removal  
 - [ ] Statement support
 - [ ] Complex data type  
 - [ ] Configuration support
 - [ ] Error handling
-- [x] File import support  
 - [ ] Plugin support
 - [ ] Cache support
 - [ ] Testing
