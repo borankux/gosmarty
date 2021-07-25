@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-	s := smarty.Smarty{}
-	s.Assign("message", "This is the message")
-	s.Assign("subtitle", "this is the subtitle")
-	s.Assign("age", 28)
-	rendered := s.Render("main")
+	s := smarty.Smarty{Config: &smarty.Config{
+		TemplateDir: "templates",
+	}}
+	rendered := s.Render("include-file")
 	fmt.Println(rendered)
 }
