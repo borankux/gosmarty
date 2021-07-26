@@ -17,8 +17,13 @@ func ScanTemplates(dir string) []Template {
 		color.Red("this dir doesn't exist:", dir)
 	}
 
-	for file := range files {
-		fmt.Println(file)
+	for _, file := range files {
+		fullPath := Full(dir, file.Name())
+		fmt.Println(fullPath)
+		if file.IsDir() {
+			color.Blue("%s is a dir!, scanning further", fullPath)
+			ScanTemplates(fullPath)
+		}
 	}
 
 	return []Template{
@@ -27,4 +32,15 @@ func ScanTemplates(dir string) []Template {
 			Content:  "content",
 		},
 	}
+}
+
+
+func Full(dir string, path string) string {
+	last := dir[len(dir)-1:]
+	middle := ""
+
+	if last != "/" {
+		middle = "/"
+	}
+	return dir + middle + path
 }
